@@ -23,4 +23,9 @@ public class UserRest {
 		return userRepo.findByLoginAndPassword(u.getLogin(),u.getPassword());					
 	}	
 	
+	@PostMapping("signin")
+	public User saveNewUser(@RequestBody User u) {			
+		return userRepo.save(u);					
+	}	
+	
 }

@@ -30,7 +30,7 @@ public class LeChatDuMerveilleuxApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		System.out.println("Lancement terminé");
 		
-
+		
 		
 		User mohammed = new User(null, "Momo", "login1", "password1");
 		User guillaume = new User(null, "Guigui", "login2", "password2");
