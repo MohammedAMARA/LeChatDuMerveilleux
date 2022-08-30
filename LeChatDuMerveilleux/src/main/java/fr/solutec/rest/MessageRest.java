@@ -1,5 +1,22 @@
 package fr.solutec.rest;
 
-public class MessageRest {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import fr.solutec.entities.Message;
+import fr.solutec.repository.MessageRepository;
+
+@RestController @CrossOrigin("*")
+public class MessageRest {
+	
+	@Autowired
+	private MessageRepository messageRepo;
+
+	@GetMapping("/chattin")
+	public Iterable<Message> getAllMessage() {
+		return messageRepo.findAll();
+	}
+	
 }

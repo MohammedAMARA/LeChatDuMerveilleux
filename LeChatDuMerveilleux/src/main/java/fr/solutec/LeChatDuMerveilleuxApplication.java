@@ -43,12 +43,12 @@ public class LeChatDuMerveilleuxApplication implements CommandLineRunner{
 		userRepo.save(shajiesan);
 		
 		
-/*
+
 		messageRepo.save(new Message(null, "Contenu1", "2021-01-20", guillaume));
 		messageRepo.save(new Message(null, "Contenu2", "2021-01-20", guillaume));
 		messageRepo.save(new Message(null, "Contenu3", "2021-01-20", guillaume));
 		messageRepo.save(new Message(null, "Contenu4", "2021-01-20", guillaume));
-*/	
+
 		
 	}
 

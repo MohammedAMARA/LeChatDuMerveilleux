@@ -18,7 +18,7 @@ public class Message {
 	@Id @GeneratedValue
 	private Long idMessage;
 	private String contenu;
-	private Date date;	
+	private String date;	
 	@ManyToOne
 	private User pseudo;
 	
