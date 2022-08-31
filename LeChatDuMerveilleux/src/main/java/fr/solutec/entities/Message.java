@@ -21,7 +21,7 @@ public class Message {
 	private String date;	
 	
 	@ManyToOne
-	private User idUser;
+	private User user;
 	@ManyToOne
-	private Room idRoom;
+	private Room room;
 }
