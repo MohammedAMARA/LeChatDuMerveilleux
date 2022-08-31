@@ -19,8 +19,9 @@ public class Message {
 	private Long idMessage;
 	private String contenu;
 	private String date;	
+	
 	@ManyToOne
-	private User pseudo;
+	private User idUser;
 	@ManyToOne
 	private Room idRoom;
 }
