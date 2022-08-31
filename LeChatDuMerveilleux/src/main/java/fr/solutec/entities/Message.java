@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Message {
 	@Id @GeneratedValue
-	private Long idMessage;
+	private Long id;
 	private String contenu;
 	private String date;	
 	
