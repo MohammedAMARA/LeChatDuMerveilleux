@@ -1,5 +1,11 @@
 package fr.solutec;
 
+
+
+import java.sql.Timestamp;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,7 +29,9 @@ public class LeChatDuMerveilleuxApplication implements CommandLineRunner{
 	
 	@Autowired
 	private RoomRepository roomRepo;
-
+	
+	Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+	
 	public static void main(String[] args) {
 		System.out.println("Lancement démarré");
 		SpringApplication.run(LeChatDuMerveilleuxApplication.class, args);
@@ -53,12 +61,11 @@ public class LeChatDuMerveilleuxApplication implements CommandLineRunner{
 		roomRepo.save(Room1);
 		roomRepo.save(Room2);
 
-		messageRepo.save(new Message(null, "Contenu1", "2021-01-20", guillaume, Room1));
-		messageRepo.save(new Message(null, "Contenu2", "2021-01-20", guillaume, Room1));
-		messageRepo.save(new Message(null, "Contenu3", "2021-01-20", guillaume, Room2));
-		messageRepo.save(new Message(null, "Contenu4", "2021-01-20", guillaume, Room2));
+		messageRepo.save(new Message(null, "Contenu1", timestamp, guillaume, Room1));
+		messageRepo.save(new Message(null, "Contenu2", timestamp, guillaume, Room1));
+		messageRepo.save(new Message(null, "Contenu3", timestamp, guillaume, Room2));
+		messageRepo.save(new Message(null, "Contenu4", timestamp, guillaume, Room2));
 
-		
 	}
 
 }
