@@ -45,10 +45,10 @@ public class LeChatDuMerveilleuxApplication implements CommandLineRunner{
 		
 		
 		
-		User mohammed = new User(null, "Momo", "login1", "password1");
-		User guillaume = new User(null, "Guigui", "login2", "password2");
-		User adrien = new User(null, "Dridri", "login3", "password3");
-		User shajiesan = new User(null, "Sai", "login4", "password4");
+		User mohammed = new User(null, "Momo", "login1", "password1","email1@email.com","0601020304",50,null);
+		User guillaume = new User(null, "Guigui", "login2", "password2", null, null, 40, null);
+		User adrien = new User(null, "Dridri", "login3", "password3", null, null, 60, null);
+		User shajiesan = new User(null, "Sai", "login4", "password4", null, null, 100, null);
 		
 		userRepo.save(mohammed);
 		userRepo.save(guillaume);
