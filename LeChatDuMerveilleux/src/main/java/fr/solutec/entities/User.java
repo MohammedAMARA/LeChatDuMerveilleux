@@ -21,7 +21,7 @@ public class User {
 	private String email;
 	private String telephone;
 	private int score;
-	private String photourl; 
+	private String avatarUrl; 
 	
 	
 }
