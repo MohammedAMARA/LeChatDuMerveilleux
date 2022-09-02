@@ -21,9 +21,7 @@ public class User {
 	private String email;
 	private String telephone;
 	private int score;
-	
-	@Lob
-	private byte[] photo; 
+	private String photourl; 
 	
 	
 }
