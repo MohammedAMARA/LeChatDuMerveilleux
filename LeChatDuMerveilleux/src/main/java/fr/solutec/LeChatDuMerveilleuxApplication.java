@@ -35,8 +35,6 @@ public class LeChatDuMerveilleuxApplication implements CommandLineRunner{
 	public static void main(String[] args) {
 		System.out.println("Lancement démarré");
 		SpringApplication.run(LeChatDuMerveilleuxApplication.class, args);
-		
-		
 	}
 	
 	@Override
@@ -54,9 +52,11 @@ public class LeChatDuMerveilleuxApplication implements CommandLineRunner{
 		
 		
 		Room Room1 = new Room("1", "Room1");
-		Room Room2 = new Room("2", "Room2");
 		roomRepo.save(Room1);
+		Room Room2 = new Room("2", "Room2");
 		roomRepo.save(Room2);
+		roomRepo.save(new Room("3", "General"));
+		roomRepo.save(new Room("4", "Projet"));
 
 		messageRepo.save(new Message(null, "Contenu1", timestamp, guillaume, Room1));
 		messageRepo.save(new Message(null, "Contenu2", timestamp, guillaume, Room1));

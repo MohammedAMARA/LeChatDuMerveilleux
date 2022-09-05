@@ -11,13 +11,13 @@ import fr.solutec.entities.Message;
 import fr.solutec.entities.Room;
 import fr.solutec.repository.RoomRepository;
 
-
+@RestController @CrossOrigin("*")
 public class RoomRest {
 	@Autowired
-	private  RoomRepository roomRepo;
+	private RoomRepository roomRepo;
 	
-	@GetMapping("/rooms/names")
-	public Iterable<Room> getAllRooms() {
+	@GetMapping("/rooms")
+	public Iterable<Room> getAllRoom() {
 		return roomRepo.findAll();
 	}
 
