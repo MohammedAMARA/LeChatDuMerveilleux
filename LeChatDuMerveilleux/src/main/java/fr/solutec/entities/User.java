@@ -22,6 +22,4 @@ public class User {
 	private String telephone;
 	private int score;
 	private String avatarUrl; 
-	
-	
 }

@@ -1,5 +1,6 @@
 package fr.solutec.rest;
 
+import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +28,11 @@ public class MessageRest {
 	
 	@PostMapping("chattin")
 	public Message saveMemo(@RequestBody Message m) {
+		m.setDate(new Date());
 		return messageRepo.save(m);
 	}
 	
-	@GetMapping("message/room/{id}")
+	@GetMapping("message/rooms/{id}")
 	public Iterable<Message> getAllMessage(@PathVariable String id){
 		return messageRepo.findByRoomId(id);
 	}
