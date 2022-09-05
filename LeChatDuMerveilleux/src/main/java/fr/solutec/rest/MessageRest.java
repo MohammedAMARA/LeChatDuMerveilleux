@@ -26,13 +26,13 @@ public class MessageRest {
 		return messageRepo.findAll();
 	}
 	
-	@PostMapping("chattin")
+	@PostMapping("/chattin")
 	public Message saveMemo(@RequestBody Message m) {
 		m.setDate(new Date());
 		return messageRepo.save(m);
 	}
 	
-	@GetMapping("message/rooms/{id}")
+	@GetMapping("/message/rooms/{id}")
 	public Iterable<Message> getAllMessage(@PathVariable String id){
 		return messageRepo.findByRoomId(id);
 	}

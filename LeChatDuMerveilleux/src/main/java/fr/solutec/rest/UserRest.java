@@ -26,18 +26,18 @@ public class UserRest {
 		return userRepo.findAll();
 	}
 	
-	@GetMapping("user/{id}")
+	@GetMapping("/user/{id}")
 	public Optional<User> getAllUser(@PathVariable Long id){
 		return userRepo.findById(id);
 	}
 	
 	
-	@PostMapping("login")
+	@PostMapping("/login")
 	public Optional <User> getLoginAndPassword(@RequestBody User u) {			
 		return userRepo.findByLoginAndPassword(u.getLogin(),u.getPassword());					
 	}	
 	
-	@PostMapping("signin")
+	@PostMapping("/signin")
 	public User saveNewUser(@RequestBody User u) {			
 		return userRepo.save(u);					
 	}	
