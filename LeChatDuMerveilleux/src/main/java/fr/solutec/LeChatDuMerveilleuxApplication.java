@@ -41,10 +41,10 @@ public class LeChatDuMerveilleuxApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		System.out.println("Lancement terminé");
 		
-		User mohammed = new User(null, "Momo", "login1", "password1","email1@email.com","0601020304",50,null); 
-		User guillaume = new User(null, "Guigui", "login2", "password2", "email2@email.com", "0611121314", 40, null); 
-		User adrien = new User(null, "Dridri", "login3", "password3", "email3@email.com", "0621222324", 60, null); 
-		User shajiesan = new User(null, "Sai", "login4", "password4", "email4@email.com", "0631323334", 100, null);	
+		User mohammed = new User(null, "Momo", "login1", "password1","0601020304",50,null); 
+		User guillaume = new User(null, "Guigui", "login2", "password2", "0611121314", 40, null); 
+		User adrien = new User(null, "Dridri", "login3", "password3", "0621222324", 60, null); 
+		User shajiesan = new User(null, "Sai", "login4", "password4", "0631323334", 100, null);	
 		userRepo.save(mohammed);
 		userRepo.save(guillaume);
 		userRepo.save(adrien);

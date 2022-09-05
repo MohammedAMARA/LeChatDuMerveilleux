@@ -18,7 +18,6 @@ public class User {
 	private String pseudo;
 	private String login;
 	private String password;	
-	private String email;
 	private String telephone;
 	private int score;
 	private String avatarUrl; 
