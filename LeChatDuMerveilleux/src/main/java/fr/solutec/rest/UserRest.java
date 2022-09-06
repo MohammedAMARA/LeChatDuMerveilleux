@@ -29,7 +29,7 @@ public class UserRest {
 	}
 	
 	@GetMapping("/user/{id}")
-	public Optional<User> getAllUser(@PathVariable Long id){
+	public Optional<User> getUserById(@PathVariable Long id){
 		return userRepo.findById(id);
 	}
 	
@@ -40,14 +40,12 @@ public class UserRest {
 	}	
 	
 	@PostMapping("/signin")
-	public User saveNewUser(@RequestBody User u) {			
+	public User saveNewUser(@RequestBody User u) {		
 		return userRepo.save(u);					
-	}	
-	
-	@PutMapping("/updateuser")
-	public User updateUser(@RequestBody User user) {
-		return userRepo.save(user);
-		
 	}
 	
+	@PutMapping("/users/update")
+	public User updateUser(@RequestBody User user) {
+		return userRepo.save(user);
+	}
 }
