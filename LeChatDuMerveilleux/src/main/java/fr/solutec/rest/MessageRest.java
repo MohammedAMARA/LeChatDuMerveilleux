@@ -33,7 +33,7 @@ public class MessageRest {
 	}
 	
 	@GetMapping("/message/rooms/{id}")
-	public Iterable<Message> getAllMessage(@PathVariable String id){
+	public Iterable<Message> getAllMessage(@PathVariable Long id){
 		return messageRepo.findByRoomId(id);
 	}
 	

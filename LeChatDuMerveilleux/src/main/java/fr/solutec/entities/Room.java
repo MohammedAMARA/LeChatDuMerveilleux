@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @Entity
 
 public class Room {
-	@Id
-	private String id;
+	@Id @GeneratedValue
+	private Long id;
 	private String name;
 	
 }

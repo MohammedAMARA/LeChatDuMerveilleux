@@ -51,12 +51,12 @@ public class LeChatDuMerveilleuxApplication implements CommandLineRunner{
 		userRepo.save(shajiesan);
 		
 		
-		Room Room1 = new Room("1", "Room1");
+		Room Room1 = new Room(null, "Room1");
 		roomRepo.save(Room1);
-		Room Room2 = new Room("2", "Room2");
+		Room Room2 = new Room(null, "Room2");
 		roomRepo.save(Room2);
-		roomRepo.save(new Room("3", "General"));
-		roomRepo.save(new Room("4", "Projet"));
+		roomRepo.save(new Room(null, "General"));
+		roomRepo.save(new Room(null, "Projet"));
 
 		messageRepo.save(new Message(null, "Contenu1", timestamp, guillaume, Room1));
 		messageRepo.save(new Message(null, "Contenu2", timestamp, guillaume, Room1));
